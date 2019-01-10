@@ -47,8 +47,20 @@
 
 				<section>
 					<h4>Prerequisites</h4>
+					You need a network provider/plugin that can implement network policies
 				</section>
 
+				<section>
+					<h4>Network Plugins</h4>
+					Some network plugins that have support are:
+					<ul>
+						<li>Weavenet</li>
+						<li>Calico</li>
+						<li>Cilium</li>
+						<li>kube-router</li>
+						<li>Romana</li>
+					</ul>
+				</section>
 				<section>
 					<h4>Terminology</h4>
 				</section>
@@ -61,10 +73,38 @@
 					<h4>Ingress/Egress Selectors</h4>
 					Selectors used for Ingress/Egress rules<br>
 					<ul>
-						<li>ipBlock</li>
 						<li>podSelector</li>
+						<li>ipBlock</li>
 						<li>namespaceSelector</li>
 					</ul>
+				</section>
+
+				<section>
+					<h4>IP Block</h4>
+					Allows you to allow traffic from a cidr block
+					<pre><code>
+ingress:
+- from:
+  - ipBlock:
+      cidr: 172.14.0.0/16
+      except:
+      - 172.14.1.0/24
+					</code></pre>
+				</section>
+
+				<section>
+					<h4>Namespace Selector</h4>
+					<ul>
+						<li>Allows traffic from entire namespace</li>
+						<li>Requires namespaces have labels</li>
+					</ul>
+					<pre><code>
+$ kubectl create namespace production
+namespace/production created
+$ kubectl label namespace/production workload=prod
+namespace/production labeled
+$
+					</code></pre>
 				</section>
 
 			</div>
