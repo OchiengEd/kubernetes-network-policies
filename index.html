@@ -25,14 +25,14 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h4>NetworkPolicy</h4>
+					<h4>Network Policy</h4>
 					Edmund Ochieng<br />
 					Cloud Engineer<br />
 					Rackspace Hosting
 				</section>
 
 				<section>
-					<h4>NetworkPolicy</h4>
+					<h4>Network Policy</h4>
 					A <b>Network Policy</b> defines which traffic flow is allowed between groups of pods and other network resources
 				</section>
 
@@ -61,13 +61,14 @@
 						<li>Romana</li>
 					</ul>
 				</section>
+
 				<section>
 					<h4>Isolated Pods</h4>
 					These are pods selected by one or more network policies and whose ingress or egress traffic is restricted based on the policy rules
 					<pre><code>
 $ kubectl get netpol
 NAME                       POD-SELECTOR   AGE
-allow-dns-policy           <none>         1d
+allow-dns-policy           &lt;none&gt;         1d
 nginx-allow-mongo-egress   app=nginx      1d
 $
 					</code></pre>
