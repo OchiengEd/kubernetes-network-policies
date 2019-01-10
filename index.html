@@ -62,7 +62,20 @@
 					</ul>
 				</section>
 				<section>
-					<h4>Terminology</h4>
+					<h4>Isolated Pods</h4>
+					These are pods selected by one or more network policies and whose ingress or egress traffic is restricted based on the policy rules
+					<pre><code>
+$ kubectl get netpol
+NAME                       POD-SELECTOR   AGE
+allow-dns-policy           <none>         1d
+nginx-allow-mongo-egress   app=nginx      1d
+$
+					</code></pre>
+				</section>
+
+				<section>
+					<h4>Non-Isolated pods</h4>
+					<b>Non-isolated pods</b> on the contrary have unrestricted traffic flow
 				</section>
 
 				<section>
