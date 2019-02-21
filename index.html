@@ -129,11 +129,11 @@ $
 				</section>
 
 				<section>
-					<h4>Kube-Hunter</h4>
+					<h4>Kube-Bench</h4>
 				</section>
 
 				<section>
-					<h4>What is Kube-Hunter?</h4>
+					<h4>What is Kube-Bench?</h4>
 					<ul>
 						<li>Security scanner</li>
 						<li>Checks if Kubernetes is setup with security best practices</li>
@@ -152,6 +152,11 @@ $
 				<section>
 					<h4>Running kube-bench</h4>
 					I recommend running the container with a defined configuration
+					<pre><code>
+$ sudo docker run --pid=host -v /etc:/etc:ro -v
+/var:/var:ro -t -v /home/guest/kube-bench/cfg/1.8/master.yaml:/opt/kube-bench/cfg/config.yaml
+aquasec/kube-bench:latest master --version 1.8
+					</code></pre>
 				</section>
 
 				<section>
@@ -185,18 +190,22 @@ apiserver.yaml on the master node and set the below parameter.
 1.1.8 Edit the API server pod specification file $apiserverconf
 on the master node and set the below parameter.
 --profiling=false
-
-1.1.9 Edit the API server pod specification file $apiserverconf
-on the master node and set the below parameter.
---repair-malformed-updates=false
 					</code></pre>
 				</section>
 
 				<section>
-					<h4>Recomendations</h4>
-					<pre><code>
+					<h4>Remediation</h4>
+					<ul>
+						<li>Pull up documentation</li>
+					</ul>
+				</section>
 
-					</code></pre>
+				<section>
+					<h4>Recomendations</h4>
+					<ul>
+						<li>Make sure you have a way to get in before locking down the system</li>
+						<li></li>
+					</ul>
 				</section>
 
 			</div>
