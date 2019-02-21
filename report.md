@@ -52,7 +52,7 @@
 [PASS] 1.3.7 Ensure that the --address argument is set to 127.0.0.1 (Scored)
 [INFO] 1.4 Configuration Files
 [FAIL] 1.4.1 Ensure that the API server pod specification file permissions are set to 644 or more restrictive (Scored)
-[FAIL] 1.4.2 Ensure that the API server pod specification file ownership is set to root:root (Scored)                                                    [333/1455]
+[FAIL] 1.4.2 Ensure that the API server pod specification file ownership is set to root:root (Scored)                                                    
 [FAIL] 1.4.3 Ensure that the controller manager pod specification file permissions are set to 644 or more restrictive (Scored)
 [FAIL] 1.4.4 Ensure that the controller manager pod specification file ownership is set to root:root (Scored)
 [FAIL] 1.4.5 Ensure that the scheduler pod specification file permissions are set to 644 or more restrictive (Scored)
@@ -108,7 +108,7 @@ apiserver.yaml on the master node and set the below parameter.
 on the master node and set the below parameter.
 --profiling=false
 
-1.1.9 Edit the API server pod specification file $apiserverconf                                                                                          [277/1455]
+1.1.9 Edit the API server pod specification file $apiserverconf                                                                       
 on the master node and set the below parameter.
 --repair-malformed-updates=false
 
@@ -168,7 +168,7 @@ kubelet client certificate and key parameters as below.
 --kubelet-client-certificate=<path/to/client-certificate-file>
 --kubelet-client-key=<path/to/client-key-file>
 
-1.1.23 Edit the API server pod specification file $apiserverconf                                                                                         [217/1455]
+1.1.23 Edit the API server pod specification file $apiserverconf
 on the master node and set the below parameter.
 --service-account-lookup=true
 
@@ -225,7 +225,7 @@ on the master node and set the --authorization-mode parameter to a
 value that includes Node.
 --authorization-mode=Node,RBAC
 
-1.1.33 Follow the Kubernetes documentation and configure NodeRestriction plug-in on                                                                      [160/1455]
+1.1.33 Follow the Kubernetes documentation and configure NodeRestriction plug-in on
 kubelets. Then, edit the API server pod specification file $apiserverconf
 on the master node and set the --enable-admission-plugins parameter to a
 value that includes NodeRestriction.
@@ -283,7 +283,7 @@ on the master node and set the --service-account-private-
 key-file parameter to the private key file for service accounts.
 --service-account-private-key-file=<filename>
 
-1.3.5 Edit the Controller Manager pod specification file $controllermanagerconf                                                                          [102/1455]
+1.3.5 Edit the Controller Manager pod specification file $controllermanagerconf
 on the master node and set the --root-ca-file parameter to
 the certificate bundle file.
 --root-ca-file=<path/to/file>
@@ -339,7 +339,7 @@ ps -ef | grep $etcdbin
 Run the below command (based on the etcd data directory found above). For example,
 chmod 700 /var/lib/etcd
 
-1.4.12 On the etcd server node, get the etcd data directory, passed as an argument --data-dir ,                                                           [46/1455]
+1.4.12 On the etcd server node, get the etcd data directory, passed as an argument --data-dir ,
 from the below command:
 ps -ef | grep $etcdbin
 Run the below command (based on the etcd data directory found above). For example,
