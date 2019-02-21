@@ -36,13 +36,27 @@
 					<ul>
 						<li>Network Policies</li>
 						<li>kube-bench</li>
-						<li>kube-hunter</li>
 					</ul>
 				</section>
 
 				<section>
+					<img src="images/volvo.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="images/secure-door.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="images/primates.jpg" alt="">
+				</section>
+
+				<section>
 					<h4>Network Policy</h4>
-					A <b>Network Policy</b> defines which traffic flow is allowed between groups of pods and other network resources
+					<ul>
+						<li>A <b>Network Policy</b> governs traffic flow between pods and other network resources</li>
+						<li>traffic not explicitly allowed will be denied</li>
+					</ul>
 				</section>
 
 				<section>
@@ -92,6 +106,9 @@ $
 
 				<section>
 					<h4>Pod Selector</h4>
+					<ul>
+						<li>an empty pod selector selects all pods</li>
+					</ul>
 				</section>
 
 				<section>
@@ -158,8 +175,8 @@ $
 					I recommend running the container with a defined configuration
 					<pre><code>
 $ sudo docker run --pid=host -v /etc:/etc:ro -v
-/var:/var:ro -t -v /home/guest/kube-bench/cfg/1.8/master.yaml:/opt/kube-bench/cfg/config.yaml
-aquasec/kube-bench:latest master --version 1.8
+/var:/var:ro -t -v /home/guest/kube-bench/cfg/1.11/master.yaml:/opt/kube-bench/cfg/config.yaml
+aquasec/kube-bench:latest master --version 1.11
 					</code></pre>
 				</section>
 
@@ -205,9 +222,10 @@ on the master node and set the below parameter.
 				</section>
 
 				<section>
-					<h4>Recomendations</h4>
+					<h4>Conclusion</h4>
 					<ul>
-						<li>Make sure you have a way to get in before locking down the system</li>
+						<li>Make sure you have a way back in before locking down the system</li>
+						<li>Read and understand documentation before making changes to the system</li>
 						<li></li>
 					</ul>
 				</section>
