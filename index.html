@@ -26,11 +26,13 @@
 			<div class="slides">
 				<section>
 					<h4>Kubernetes Security Primer</h4>
+					<a href="https://ochienged.github.io/kubernetes-network-policies/">https://ochienged.github.io/kubernetes-network-policies/</a><br />
 					Edmund Ochieng<br />
 					Michael Saenz
 				</section>
 
 				<section>
+					<h4>Overview</h4>
 					<ul>
 						<li>Network Policies</li>
 						<li>kube-bench</li>
@@ -46,7 +48,7 @@
 				<section>
 					<h4>About Policies</h4>
 					<ul>
-						<li>Only allow traffic</li>
+						<li>Can only allow traffic</li>
 						<li>Use labels to select pods to be affected by policy</li>
 						<li>They are namespaced resources</li>
 					</ul>
@@ -71,7 +73,9 @@
 
 				<section>
 					<h4>Isolated Pods</h4>
-					These are pods selected by one or more network policies and whose ingress or egress traffic is restricted based on the policy rules
+					<ul>
+						<li>These are pods targeted by one or more network policies</li>
+					</ul>
 					<pre><code>
 $ kubectl get netpol
 NAME                       POD-SELECTOR   AGE
